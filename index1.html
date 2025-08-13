@@ -1,263 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="无人机培训,宇智飞翔无人机培训中心,宇智飞翔培训中心,宇智飞翔无人机应用技术培训中心,大疆宇智飞翔,宇智飞翔,宇智飞翔,utc,大疆无人机培训,大疆无人机," />
-    <meta name="description" content="宇智飞翔无人机应用技术培训中心，专注于无人机在各行业的应用技术，量身定制专业课程，让从业者将先进的无人机技术应用在工作中，获得领先行业的效率、安全性与工作成果。" />
-	<title>广东宇智飞翔通用航空科技有限公司</title>
-	<!-- 引入Bootstrap和自定义CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
+    <meta name="description"
+        content="宇智飞翔无人机应用技术培训中心，专注于无人机在各行业的应用技术，量身定制专业课程，让从业者将先进的无人机技术应用在工作中，获得领先行业的效率、安全性与工作成果。" />
+    <title>广东宇智飞翔通用航空科技有限公司</title>
+    <!-- 引入Bootstrap和自定义CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
-<body style="margin:0; padding:0; width:100vw;">
-	<!-- 第1栏：页眉（LOGO行+导航菜单） -->
-    <div style="background:#fff;">
-    <header class="bg-white border-bottom shadow-sm">
-        <div class="container d-flex align-items-center py-3">
-            <img src="images/logo.png" alt="公司LOGO" style="height:80px; width:auto;" class="me-4">
-            <div class="flex-grow-1">
-                <h1 class="mb-1" style="font-family:'SimHei', '黑体', Arial; font-size:1.5rem; font-weight:bold; color:#222;">专业无人机培训基地</h1>
-                <h2 class="mb-0" style="font-size:1.0rem; font-weight:300; color:#888;">用智能科技领航低空未来</h2>
-            </div>
-         <div class="ms-auto text-end d-flex align-items-center flex-column">
-                <div class="d-flex align-items-center mb-1">
-                    <img src="images/icon/phone.png" alt="电话图标" style="height:24px;width:24px;" class="me-2">
-                    <span class="fs-6 text-secondary">全国服务热线</span>
+
+<body>
+    <!-- 第1栏：页眉 -->
+    <div class="yz_header">
+        <!-- LOGO栏 -->
+        <header class="bg-white border-bottom shadow-sm">
+            <div class="container d-flex align-items-center py-3">
+                <img src="images/common/logo/zy_logo.png" alt="公司LOGO" style="height:80px; width:auto;" class="me-4">
+
+                <div class="ms-auto text-end d-flex align-items-center flex-column">
+                    <div class="d-flex align-items-center mb-1">
+                        <img src="images/common/logo/zy_tele.png" alt="电话图标" style="height:80px;width:auto;"
+                            class="me-2">
+                    </div>
                 </div>
-                <span class="fs-5 fw-bold text-primary">400-110-7588</span>
             </div>
-        </div>
-    </header>
-
-    <!-- 导航栏 -->
-    <nav class="navbar navbar-expand-lg navbar-light main-navbar" style="background:#1976d2;">
-     <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav w-100 d-flex justify-content-between">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">首页</a></li>
-                    <li class="nav-item"><a class="nav-link" href="training.html">无人机执照培训</a></li>
-                    <li class="nav-item"><a class="nav-link" href="applications.html">行业应用</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">产品中心</a></li>
-                    <li class="nav-item"><a class="nav-link" href="news.html">公司案例</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">新闻中心</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html">宇智百科</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">关于我们</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- 
-	<header class="bg-white border-bottom shadow-sm ">
-		<div class="header-logo-row container d-flex align-items-center py-3" >
-			<div class="logo">
-				<img src="images/common/logo/zy_logo.png" alt="LOGO" style="height:80px;">
-			</div>
-			<div class="tele">
-				<img src="images/common/logo/zy_tele.png" alt="联系电话" style="height:80px;">
-			</div>
-		</div>
-	<nav class="navbar navbar-expand-lg navbar-light main-navbar container" style="background:#1976d2;">
-			<ul class="navbar-nav w-100">
-				<li class="nav-item flex-fill"><a class="nav-link" href="index.html">首页</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="training.html">无人机培训</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="application.html">行业解决方案</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="products.html">产品中心</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="success.html">合作案例</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="news.html">新闻中心</a></li>
-				<li class="nav-item flex-fill"><a class="nav-link" href="about.html">关于智宇飞翔</a></li>
-			</ul>
-		</nav>
-	</header>
-    -->
-
-	<!-- 第2栏：宣传广告栏（轮循图片+热点信息栏） -->
-	<!-- TODO: 轮播图和热点信息栏，后续补充内容 -->
-	<section id="banner">
-		<!-- 第2栏内容占位：宣传广告栏 -->
-		<!-- 轮播图区域（Bootstrap Carousel） -->
-		<!-- 热点信息栏区域 -->
-	</section>
-
-	<!-- 第3栏：宇智宏观宣传栏 -->
-	<section id="macro">
-		<!-- 第3栏内容占位：宇智宏观宣传栏 -->
-	</section>
-
-	<!-- 第4栏：选择宇智飞翔栏 -->
-	<section id="choose">
-		<!-- 第4栏内容占位：选择宇智飞翔栏 -->
-	</section>
-
-	<!-- 第5栏：行业解决方案栏 -->
-	<section id="solution">
-		<!-- 第5栏内容占位：行业解决方案栏 -->
-	</section>
-
-	<!-- 第6栏：合作案例栏 -->
-	<section id="cases">
-		<!-- 第6栏内容占位：合作案例栏 -->
-	</section>
-
-	<!-- 第7栏：走进宇智飞翔栏 -->
-	<section id="about">
-		<!-- 第7栏内容占位：走进宇智飞翔栏 -->
-	</section>
-
-    <!-- 页脚 -->
-    <footer class="mt-auto w-100" style="background:#0a2356; color:#fff; ">
-        <!-- 顶部导航栏 -->
-        <div class="container pt-3 pb-2">
-            <nav class="d-flex justify-content-center align-items-center mb-0" style="font-size:0.95rem;font-family:'SimHei','黑体',Arial;height:4.5rem;display:flex;align-items:center;">
-                <a href="index.html" class="text-white px-2 text-decoration-none">宇智飞翔首页</a>
-                <span class="px-2 text-white">|</span>
-                <a href="training.html" class="text-white px-2 text-decoration-none">无人机驾驶培训</a>
-                <span class="px-2 text-white">|</span>
-                <a href="applications.html" class="text-white px-2 text-decoration-none">行业应用方案</a>
-                <span class="px-2 text-white">|</span>
-                <a href="news.html" class="text-white px-2 text-decoration-none">合作案例</a>
-                <span class="px-2 text-white">|</span>
-                <a href="about.html" class="text-white px-2 text-decoration-none">宇智飞翔简介</a>
-            </nav>
-        </div>
-    <div style="height:1px;background:#757679;margin:0 0 0 0;"></div>
-        <!-- 中间三栏 -->
-        <div class="container py-4" style="background:#0a2356;">
-            <div class="row align-items-center">
-                <!-- 左栏LOGO及标签 -->
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <img src="images/about/logo_b200.png" alt="LOGO" style="width:200px;max-width:100%;" class="mb-2">
-                    <div class="fw-bold mb-2" style="width:200px;margin:0 auto;">专业无人机飞行培训基地</div>
-                    <button class="btn btn-light btn-sm mb-2" style="width:200px;border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:none;">民航局认证机构</button>
+        </header>
+        <!-- 导航栏 -->
+        <nav class="navbar navbar-expand-lg navbar-light main-navbar" style="background:#1976d2;">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav w-100 d-flex justify-content-between">
+                        <li class="nav-item flex-fill"><a class="nav-link" href="index.html">首页</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="training.html">无人机培训</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="application.html">行业解决方案</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="products.html">产品中心</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="success.html">合作案例</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="news.html">新闻中心</a></li>
+                        <li class="nav-item flex-fill"><a class="nav-link" href="about.html">关于智宇飞翔</a></li>
+                    </ul>
                 </div>
-                <!-- 中间栏服务项目与应用领域，两列 -->
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <div class="row">
-                        <div class="col-6">
-                            <h6 class="fw-bold mb-2" style="font-size:0.95rem;">服务项目</h6>
-                            <ul class="list-unstyled mb-3" style="font-size:0.85rem;">
-                                <li class="mb-1 text-white-50">无人机考证</li>
-                                <li class="mb-1 text-white-50">行业应用培训</li>
-                                <li class="mb-1 text-white-50">职业资格证培训</li>
-                                <li class="mb-1 text-white-50">无人机设备及配套产品</li>
-                                <li class="mb-1 text-white-50">更多服务咨询</li>
-                            </ul>
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- 第2栏：宣传广告栏（轮播+热点信息栏） -->
+    <section id="banner">
+        <!-- 第2栏内容占位：宣传广告栏 -->
+        <!-- 轮播图区域（Bootstrap Carousel） -->
+        <!-- 热点信息栏区域 -->
+        <div>banner</div>
+    </section>
+
+    <!-- 第3栏：宇智宏观宣传栏 -->
+    <section id="macro">
+        <!-- 第3栏内容占位：宇智宏观宣传栏 -->
+        <div>宇智飞翔</div>
+    </section>
+
+    <!-- 第4栏：选择宇智飞翔栏 -->
+    <section id="choose">
+        <!-- 第4栏内容占位：选择宇智飞翔栏 -->
+        <div>宇智优势</div>
+    </section>
+
+    <!-- 第5栏：行业解决方案栏 -->
+    <section id="solution">
+        <!-- 第5栏内容占位：行业解决方案栏 -->
+        <div>行业方案</div>
+    </section>
+
+    <!-- 第6栏：合作案例栏 -->
+    <section id="cases">
+        <!-- 第6栏内容占位：合作案例栏 -->
+        <div>合作案例</div>
+    </section>
+
+    <!-- 第7栏：走进宇智飞翔栏 -->
+    <section id="about">
+        <!-- 第7栏内容占位：走进宇智飞翔栏 -->
+        <div>关于我们</div>
+    </section>
+
+    <!-- 第8栏：页脚 -->
+    <div class="yz_footer">
+        <footer class="mt-auto w-100" style="background:#303131; color:#fff; ">
+            <!-- 第一行导航栏 -->
+            <div class="container pt-3 pb-2">
+                <nav class="d-flex justify-content-center align-items-center mb-0"
+                    style="font-size:0.85rem;font-family:'SimHei','黑体',Arial;height:4.5rem;display:flex;align-items:center;">
+                    <a href="index.html" class="text-white px-2 text-decoration-none">宇智飞翔首页</a>
+                    <span class="px-2 text-white">|</span>
+                    <a href="training.html" class="text-white px-2 text-decoration-none">无人机驾驶培训</a>
+                    <span class="px-2 text-white">|</span>
+                    <a href="application.html" class="text-white px-2 text-decoration-none">行业应用方案</a>
+                    <span class="px-2 text-white">|</span>
+                    <a href="success.html" class="text-white px-2 text-decoration-none">合作案例</a>
+                    <span class="px-2 text-white">|</span>
+                    <a href="about.html" class="text-white px-2 text-decoration-none">宇智飞翔简介</a>
+                </nav>
+            </div>
+            <div style="height:1px;background:#757679;margin:0 0 0 0;"></div>
+            <!-- 第二行信息栏 -->
+            <div class="container py-4" >
+                    <div class="row align-items-center g-4">
+                    <!-- 第1列LOGO及标签 -->
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <img src="images/common/logo/logo_b.png" alt="LOGO" style="width:200px;max-width:100%;"
+                            class="mb-2">
+                        <div class="fw-bold mb-2" style="width:200px;margin:0 auto;">专业无人机飞行培训基地</div>
+                        <button class="btn btn-light btn-sm mb-2" style="width:200px;border-radius:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border:none;">民航局认证机构</button>
+                    </div>
+                    <!-- 第2列 服务项目和应用领域 -->
+                    <div class="col-md-5 mb-4 mb-md-0">
+                        <div class="row g-4">
+                            <div class="col-4">
+                                <h6 class="fw-bold mb-2" style="font-size:0.95rem;">服务项目</h6>
+                                <ul class="list-unstyled mb-3" style="font-size:0.85rem;">
+                                    <li class="mb-1 text-white-50">无人机考证</li>
+                                    <li class="mb-1 text-white-50">行业应用培训</li>
+                                    <li class="mb-1 text-white-50">职业资格证培训</li>
+                                    <li class="mb-1 text-white-50">无人机和配套产品</li>
+                                    <li class="mb-1 text-white-50"><a href="index.html" style="color:inherit; text-decoration:underline; transition:color 0.2s;" onfocus="this.style.color='#fff'" onblur="this.style.color='inherit'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">更多咨询……</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <h6 class="fw-bold mb-2" style="font-size:0.95rem;">应用领域</h6>
+                                <ul class="list-unstyled" style="font-size:0.85rem; white-space:nowrap; max-width:320px; overflow-x:auto;">
+                                    <li class="mb-1 text-white-50">公共安全应用方案</li>
+                                    <li class="mb-1 text-white-50">应急救援应用方案</li>
+                                    <li class="mb-1 text-white-50">警务交通应用方案</li>
+                                    <li class="mb-1 text-white-50">测绘能源应用方案</li>
+                                    <li class="mb-1 text-white-50"><a href="index.html" style="color:inherit; text-decoration:underline; transition:color 0.2s;" onfocus="this.style.color='#fff'" onblur="this.style.color='inherit'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">更多应用……</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-4 ms-auto">
+                                <h6 class="fw-bold mb-2" style="font-size:0.95rem;">服务案例</h6>
+                                <ul class="list-unstyled" style="font-size:0.85rem;">
+                                    <li class="mb-1 text-white-50">多地高速公路引入机场多场景综合应用</li>
+                                    <li class="mb-1 text-white-50">应急救援应用方案</li>
+                                    <li class="mb-1 text-white-50">警务交通应用方案</li>
+                                    <li class="mb-1 text-white-50">测绘能源应用方案</li>
+                                    <li class="mb-1 text-white-50"><a href="index.html" style="color:inherit; text-decoration:underline; transition:color 0.2s;" onfocus="this.style.color='#fff'" onblur="this.style.color='inherit'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='inherit'">更多案例……</a></li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <h6 class="fw-bold mb-2" style="font-size:0.95rem;">应用领域</h6>
-                            <ul class="list-unstyled" style="font-size:0.85rem;">
-                                <li class="mb-1 text-white-50">公共安全应用方案</li>
-                                <li class="mb-1 text-white-50">应急应用方案</li>
-                                <li class="mb-1 text-white-50">交通应用方案</li>
-                                <li class="mb-1 text-white-50">测绘应用方案</li>
-                                <li class="mb-1 text-white-50">能源应用方案</li>
-                                <li class="mb-1 text-white-50">水利用应用方案</li>
-                            </ul>
+                    </div>
+                    <!-- 第3列联系我们 -->
+                    <div class="col-md-3 d-flex flex-column flex-md-row align-items-left justify-content-md-end">
+                        <div class="text-center text-md-start me-md-3">
+                            <h6 class="fw-bold mb-2" style="font-size:0.95rem;">联系我们</h6>
+                            <div class="mb-1" style="font-size:0.85rem;">服务热线：<span class="fw-bold text-warning">400-110-7588</span></div>
+                            <div class="mb-1" style="font-size:0.85rem;">联系手机：<span class="fw-bold">13928035103</span></div>
+                            <div class="mb-1" style="font-size:0.85rem;">联系地址：广东省珠海市香洲区</div>
+                            <div class="mb-1" style="font-size:0.85rem;">联系邮箱：<span class="fw-bold">service@gdyzfx.com</span></div>
                         </div>
                     </div>
                 </div>
-                <!-- 右栏联系我们及二维码 -->
-                <div class="col-md-4 d-flex flex-column flex-md-row align-items-center justify-content-md-end">
-                    <div class="text-center text-md-start me-md-3">
-                        <h6 class="fw-bold mb-2" style="font-size:1rem;">联系我们</h6>
-                        <div class="mb-1">全国服务热线：<span class="fw-bold text-warning">400-110-7588</span></div>
-                        <div class="mb-1">手机：<span class="fw-bold">13928035103</span></div>
-                        <div class="mb-1">地址：广东省珠海市</div>
-                    </div>
-              </div>
             </div>
-        </div>
-        <!-- 底部备案及版权信息 -->
-    <div style="height:1px;background:#757679;margin:0 0 0 0;"></div>
-        <div class="container text-center" style="font-size:0.85rem; color:#0a2356; padding:6px 0 6px 0; letter-spacing:1px; background:none;">
-            <span style="font-family:Arial,SimHei,黑体; color:#fff;">广东宇智飞翔通用航空科技有限公司 版权所有 &copy; <span id="footer-year"></span> 备案号：粤ICP备2025453724号-1</span>
-        </div>
-        <script>
-            // 动态年份
-            document.addEventListener('DOMContentLoaded', function() {
-                var year = new Date().getFullYear();
-                document.getElementById('footer-year').textContent = year;
-            });
-        </script>
-    </footer>
+            <!-- 第三行备案版权和微信 -->
+            <div style="height:1px;background:#757679;margin:0 0 0 0;"></div>
+            <div class="container text-center" style="font-size:0.85rem; color:#0a2356; padding:6px 0 6px 0; letter-spacing:1px; background:none;">
+                <div style="display:flex; justify-content:center; align-items:center; gap:80px; font-family:Arial,SimHei,黑体; color:#fff;">
+                    <div style="text-align:left;">
+                        <div style="margin-bottom:8px;">Copyright &copy; <span id="footer-year"></span>广东宇智飞翔通用航空科技有限公司 All Rights Reserved 备案号：粤ICP备2025453724号-1</div>
+                        <div style="text-align:center;">
+                            <a href="policy.html" style="color:#888; text-decoration:none; transition:color 0.2s; margin:0 4px;" onfocus="this.style.color='#fff'" onblur="this.style.color='#888'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'">网站声明</a>
+                            &nbsp; 
+                            <a href="term.html" style="color:#888; text-decoration:none; transition:color 0.2s; margin:0 4px;" onfocus="this.style.color='#fff'" onblur="this.style.color='#888'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'">服务条款</a>
+                            &nbsp; 
+                            <a href="privacy.html" style="color:#888; text-decoration:none; transition:color 0.2s; margin:0 4px;" onfocus="this.style.color='#fff'" onblur="this.style.color='#888'" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#888'">隐私条款</a>
+                        </div>
+                    </div>
+                    <div style="display:flex; gap:48px;">
+                        <div class="footer-qrcode-item" style="text-align:center;">
+                            <img src="images/about/contact/gzh.jpg" alt="公众号二维码" style="width:100px;max-width:100%;" class="mb-1">
+                            <div class="text-white-50" style="font-size:0.75rem;">扫码关注公众号</div>
+                        </div>
+                        <div class="footer-qrcode-item" style="text-align:center;">
+                            <img src="images/about/contact/zxwx.jpg" alt="微信客服二维码" style="width:100px;max-width:100%;" class="mb-1">
+                            <div class="text-white-50" style="font-size:0.75rem;">微信服务二维码</div>
+                        </div>
+                    </div>
+                </div>
 
-	<!-- 第8栏：页脚 -->
-	<footer class="footer">
-		<!-- 第一行：页脚导航 -->
-	<div class="footer-nav">
-			<a href="index.html">宇智飞翔首页</a> |
-			<a href="training.html">无人机培训</a> |
-			<a href="application.html">行业解决方案</a> |
-			<a href="success.html">合作案例</a> |
-			<a href="about.html">关于智宇飞翔</a>
-		</div>
-		<div class="footer-divider"></div>
-		<!-- 第二行：三列布局 -->
-		<div class="footer-main">
-			<div class="footer-col">
-				<img src="images/common/logo/logo_b.png" alt="LOGO">
-				<div style="width:400px;text-align:center;">专业无人机飞行培训基地</div>
-				<button class="footer-btn">民航局认证机构</button>
-			</div>
-			<div class="footer-col" style="display:flex;">
-				<div style="flex:1; margin-right:20px;">
-					<div class="footer-title">服务项目</div>
-					<ul class="footer-list">
-						<li>无人机考证</li>
-						<li>行业应用培训</li>
-						<li>职业资格证培训</li>
-						<li>无人机及配套产品销售</li>
-						<li><a href="index.html">更多咨询……</a></li>
-					</ul>
-				</div>
-				<div style="flex:1;">
-					<div class="footer-title">行业应用</div>
-					<ul class="footer-list">
-						<li>公共安全应用方案</li>
-						<li>应急救援应用方案</li>
-						<li>警务协助应用方案</li>
-						<li>电力能源应用方案</li>
-						<li><a href="index.html">更多咨询……</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer-col">
-				<div class="footer-title">联系我们</div>
-				<div class="footer-contact">
-					服务热线 ：400-110-7588<br>
-					咨询手机：13988888888<br>
-					联系地址：广东省珠海市<br>
-					咨询邮箱：service@gdzyfx.com
-				</div>
-			</div>
-		</div>
-		<div class="footer-divider"></div>
-		<!-- 第三行：备案信息+二维码 -->
-		<div class="footer-bottom">
-			<div class="footer-info">
-				<div>Copyright @ 2025 广东宇智飞翔通用航空科技有限公司 All Rights Reserved 备案号：粤ICP备2025453724号-1</div>
-				<div>网站声明 &nbsp; 服务条款 &nbsp; 隐私条款</div>
-			</div>
-			<div class="footer-qrcode">
-				<div class="footer-qrcode-item">
-					<img src="images/about/contact/gzh.jpg" alt="公众号二维码">
-					<div>关注微信公众号</div>
-				</div>
-				<div class="footer-qrcode-item">
-					<img src="images/about/contact/zxwx.jpg" alt="微信客服二维码">
-					<div>咨询微信客服</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+            </div>
+        </footer>
+
+    </div>
 
 </body>
+
 </html>
