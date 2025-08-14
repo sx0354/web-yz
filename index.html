@@ -138,7 +138,7 @@
     <section id="macro">
 
         <div style="width:100%; background:url('images/advantage/zy-adv0.png') center top/100% no-repeat; background-color:#fff; padding:0; margin:0;">
-            <div style="width:100%; display:flex; flex-direction:column; align-items:center; gap:32px; padding:48px 0;">
+            <div style="width:100%; display:flex; flex-direction:column; align-items:center; gap:12px; padding:48px 0;">
                 <div style="width:100%; display:flex; justify-content:center;">
                     <img src="images/advantage/zy-adv1.png" alt="优势1" style="max-width:100%; height:auto; display:block;">
                 </div>
@@ -155,8 +155,58 @@
 
     <!-- 第4栏：选择宇智飞翔栏 -->
     <section id="choose">
-        <!-- 第4栏内容占位：选择宇智飞翔栏 -->
-        <div>宇智优势</div>
+        <div style="width:100%; display:flex; flex-direction:column; align-items:center; padding:0 0 32px 0; background:#fff;">
+            <!-- 第一行大图 -->
+            <div style="width:100%; display:flex; justify-content:center; margin-bottom:32px;">
+                <img src="images/advertising/zy-ad1.png" alt="宇智优势" style="max-width:100%; height:auto; display:block;">
+            </div>
+            <!-- 第二行四图横排 -->
+            <div style="width:100vw; max-width:100vw; display:flex; justify-content:center; align-items:stretch; margin:0; padding:0;">
+                <div style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; min-width:0;">
+                    <img class="choose-img" src="images/advertising/zy-ad2.png" data-default="images/advertising/zy-ad2.png" data-hover="images/advertising/zy-ad2_0.png" alt="ad2" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; min-width:0;">
+                </div>
+                <div style="width:1px; background:#e0e0e0; align-self:stretch;"></div>
+                <div style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; min-width:0;">
+                    <img class="choose-img" src="images/advertising/zy-ad3.png" data-default="images/advertising/zy-ad3.png" data-hover="images/advertising/zy-ad3_0.png" alt="ad3" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; min-width:0;">
+                </div>
+                <div style="width:1px; background:#e0e0e0; align-self:stretch;"></div>
+                <div style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; min-width:0;">
+                    <img class="choose-img" src="images/advertising/zy-ad4.png" data-default="images/advertising/zy-ad4.png" data-hover="images/advertising/zy-ad4_0.png" alt="ad4" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; min-width:0;">
+                </div>
+                <div style="width:1px; background:#e0e0e0; align-self:stretch;"></div>
+                <div style="flex:1; display:flex; justify-content:center; align-items:center; position:relative; min-width:0;">
+                    <img class="choose-img" src="images/advertising/zy-ad5.png" data-default="images/advertising/zy-ad5.png" data-hover="images/advertising/zy-ad5_0.png" alt="ad5" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; min-width:0;">
+                </div>
+            </div>
+        </div>
+        <script>
+        // 图片hover切换，宽度自适应
+        document.addEventListener('DOMContentLoaded', function() {
+            var imgs = document.querySelectorAll('.choose-img');
+            imgs.forEach(function(img) {
+                img.addEventListener('mouseenter', function() {
+                    img.src = img.getAttribute('data-hover');
+                    img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                });
+                img.addEventListener('mousemove', function() {
+                    img.src = img.getAttribute('data-hover');
+                    img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                });
+                img.addEventListener('mouseleave', function() {
+                    img.src = img.getAttribute('data-default');
+                    img.style.boxShadow = '';
+                });
+                img.addEventListener('focus', function() {
+                    img.src = img.getAttribute('data-hover');
+                    img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                });
+                img.addEventListener('blur', function() {
+                    img.src = img.getAttribute('data-default');
+                    img.style.boxShadow = '';
+                });
+            });
+        });
+        </script>
     </section>
 
     <!-- 第5栏：行业解决方案栏 -->
