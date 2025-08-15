@@ -344,8 +344,55 @@
 
     <!-- 第6栏：合作案例栏 -->
     <section id="cases">
-        <!-- 第6栏内容占位：合作案例栏 -->
-        <div>合作案例</div>
+        <!-- 第6栏内容：合作案例 -->
+        <div style="width:100%; display:flex; flex-direction:column; align-items:center; padding:0; background:#fff; margin-top:-18px;">
+            <!-- 第一行大图 -->
+            <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-bottom:8px; margin-top:0;">
+                <a href="success.html" tabindex="-1">
+                    <img src="images/success/zy-suc0.png" alt="合作案例" style="max-width:100%; height:auto; display:block;">
+                </a>
+            </div>
+            <!-- 第二行三图横排 -->
+            <div style="width:100%; max-width:1200px; display:flex; justify-content:space-between; align-items:center; gap:24px; margin:0 auto;">
+                <a href="success.html" tabindex="-1" style="flex:1; max-width:32%; display:block;">
+                    <img class="cases-img" src="images/success/zy-suc1.png" data-default="images/success/zy-suc1.png" data-hover="images/success/zy-suc1_0.png" alt="案例1" tabindex="0" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; outline:none;">
+                </a>
+                <a href="success.html" tabindex="-1" style="flex:1; max-width:32%; display:block;">
+                    <img class="cases-img" src="images/success/zy-suc2.png" data-default="images/success/zy-suc2.png" data-hover="images/success/zy-suc2_0.png" alt="案例2" tabindex="0" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; outline:none;">
+                </a>
+                <a href="success.html" tabindex="-1" style="flex:1; max-width:32%; display:block;">
+                    <img class="cases-img" src="images/success/zy-suc3.png" data-default="images/success/zy-suc3.png" data-hover="images/success/zy-suc3_0.png" alt="案例3" tabindex="0" style="width:100%; height:auto; display:block; cursor:pointer; transition:box-shadow 0.2s; outline:none;">
+                </a>
+            </div>
+        </div>
+        <script>
+            // 合作案例图片hover/focus切换
+            document.addEventListener('DOMContentLoaded', function () {
+                var imgs = document.querySelectorAll('.cases-img');
+                imgs.forEach(function (img) {
+                    img.addEventListener('mouseenter', function () {
+                        img.src = img.getAttribute('data-hover');
+                        img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                    });
+                    img.addEventListener('mousemove', function () {
+                        img.src = img.getAttribute('data-hover');
+                        img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                    });
+                    img.addEventListener('mouseleave', function () {
+                        img.src = img.getAttribute('data-default');
+                        img.style.boxShadow = '';
+                    });
+                    img.addEventListener('focus', function () {
+                        img.src = img.getAttribute('data-hover');
+                        img.style.boxShadow = '0 4px 24px rgba(25,118,210,0.10)';
+                    });
+                    img.addEventListener('blur', function () {
+                        img.src = img.getAttribute('data-default');
+                        img.style.boxShadow = '';
+                    });
+                });
+            });
+        </script>
     </section>
 
     <!-- 第7栏：走进宇智飞翔栏 -->
