@@ -54,6 +54,129 @@
         </nav>
 
     </div>
+    <!-- 第2栏: 宣传-->
+    <section id="ad">
+    </section>
+
+    <!-- 第3栏：多样化优势 -->
+    <section id="advantage">
+
+    </section>
+    <!-- 第4栏：课程选择 -->
+    <section id="course">
+
+    </section>
+    <!-- 第5栏: 班次选择 -->
+    <section id="ban">
+
+    </section>
+    <!-- 第6栏: 考生必读 -->
+    <section id="read">
+    </section>
+
+    <!-- 第7栏：走进宇智飞翔栏 -->
+    <section id="about">
+    <div style="width:100vw; max-width:100vw; background:url('images/about/yz-about.png') center top/cover no-repeat; margin:0 auto; padding:0; margin-top:64px; margin-bottom:80px;">
+            <!-- 第一行：顶部图片 -->
+            <div style="width:100%; display:flex; justify-content:center; align-items:center; padding:2px 0 0 0; margin-bottom:0;">
+                <img src="images/about/yz-about0.png" alt="关于我们" style="max-width:100%; height:auto; display:block;">
+            </div>
+            <!-- 第二三行：深蓝背景区（宽度与图片一致） -->
+            <div style="width:100%; display:flex; justify-content:center;">
+                <div style="width:100%; max-width:900px; background:#0a2356; margin-top:32px; margin-bottom:64px; padding:32px 0 24px 0; border-radius:18px;">
+                    <!-- 第二行：导航 -->
+                    <div id="about-nav" style="display:flex; justify-content:center; gap:16px; margin-bottom:24px;">
+                        <button class="about-tab-btn active" data-tab="training"
+                            style="border:1px solid #b0b6c6; background:transparent; color:#fff; font-size:1rem; padding:8px 32px; border-radius:6px; cursor:pointer; transition:color 0.2s,background 0.2s;">培训现场</button>
+                        <button class="about-tab-btn" data-tab="highlights"
+                            style="border:1px solid #b0b6c6; background:transparent; color:#fff; font-size:1rem; padding:8px 32px; border-radius:6px; cursor:pointer; transition:color 0.2s,background 0.2s;">学员风采</button>
+                        <button class="about-tab-btn" data-tab="honor"
+                            style="border:1px solid #b0b6c6; background:transparent; color:#fff; font-size:1rem; padding:8px 32px; border-radius:6px; cursor:pointer; transition:color 0.2s,background 0.2s;">资质荣誉</button>
+                        <button class="about-tab-btn" data-tab="album"
+                            style="border:1px solid #b0b6c6; background:transparent; color:#fff; font-size:1rem; padding:8px 32px; border-radius:6px; cursor:pointer; transition:color 0.2s,background 0.2s;">企业相册</button>
+                    </div>
+                    <!-- 第三行：图片区 -->
+                    <div style="width:100%; display:flex; flex-direction:column; align-items:center;">
+                        <!-- 胶片修饰条 -->
+                        <img src="images/about/film-top.png" alt="" style="width:100%; max-width:900px; min-width:240px; margin-bottom:8px;">
+                        <!-- 图片内容 -->
+                        <div id="about-tab-content" style="display:flex; justify-content:center; gap:20px; width:100%; max-width:900px; margin:0 auto;">
+                            <img src="images/about/training/yz-train1.jpg" alt="培训现场1" style="width:22%; max-width:200px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#fff;">
+                            <img src="images/about/training/yz-train2.jpg" alt="培训现场2" style="width:22%; max-width:200px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#fff;">
+                            <img src="images/about/training/yz-train3.png" alt="培训现场3" style="width:22%; max-width:200px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#fff;">
+                            <img src="images/about/training/yz-train9.jpeg" alt="培训现场4" style="width:22%; max-width:200px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); background:#fff;">
+                        </div>
+                        <!-- 胶片修饰条 -->
+                        <img src="images/about/film-bottom.png" alt="" style="width:100%; max-width:900px; min-width:240px; margin-top:0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            // about区块tab切换
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabData = {
+                    training: [
+                        "images/about/training/yz-train1.jpg",
+                        "images/about/training/yz-train2.jpg",
+                        "images/about/training/yz-train3.png",
+                        "images/about/training/yz-train9.jpeg"
+                    ],
+                    highlights: [
+                        "images/about/highlights/yz-hl1.png",
+                        "images/about/highlights/yz-hl2.jpeg",
+                        "images/about/highlights/yz-hl3.jpeg",
+                        "images/about/highlights/yz-hl4.jpeg"
+                    ],
+                    honor: [
+                        "images/about/honor/yz-honor1.jpg",
+                        "images/about/honor/yz-honor2.jpg",
+                        "images/about/honor/yz-honor3.jpg",
+                        "images/about/honor/yz-honor4.jpg"
+                    ],
+                    album: [
+                        "images/about/album/yz-album1.png",
+                        "images/about/album/yz-album2.png",
+                        "images/about/album/yz-album3.png",
+                        "images/about/album/yz-album4.png"
+                    ]
+                };
+                const navBtns = document.querySelectorAll('.about-tab-btn');
+                const content = document.getElementById('about-tab-content');
+                navBtns.forEach(btn => {
+                    btn.addEventListener('mouseenter', function () {
+                        navBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const tab = btn.getAttribute('data-tab');
+                        content.innerHTML = tabData[tab].map(src =>
+                            `<img src="${src}" alt="" style="width:22%;max-width:200px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">`
+                        ).join('');
+                    });
+                    btn.addEventListener('focus', function () {
+                        navBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        const tab = btn.getAttribute('data-tab');
+                        content.innerHTML = tabData[tab].map(src =>
+                            `<img src="${src}" alt="" style="width:22%;max-width:200px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);background:#fff;">`
+                        ).join('');
+                    });
+                });
+            });
+        </script>
+        <style>
+            /* about区块tab高亮 */
+            .about-tab-btn.active,
+            .about-tab-btn:hover,
+            .about-tab-btn:focus {
+                background: #1976d2 !important;
+                color: #fff !important;
+                border-color: #1976d2 !important;
+            }
+            .about-tab-btn {
+                outline: none;
+            }
+        </style>
+    </section>
 
 
     <!-- 第8栏：页脚 -->
@@ -196,4 +319,4 @@
 
 </body>
 
-</html>    
+</html>
