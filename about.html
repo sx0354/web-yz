@@ -54,7 +54,187 @@
         </nav>
 
     </div>
+    <!-- 宣传栏：关于我们 -->
+    <section id="ad">
+        <img src="images/about/about0.jpg" alt="关于我们"
+            style="width:100vw; max-width:100%; height:auto; display:block; margin:0 auto;">
+    </section>
 
+    <!-- 第2栏：宇智飞翔 -->
+    <section id="yzfx" style="margin-top:48px;">
+        <div style="width:100%; max-width:1200px; margin:0 auto; display:flex; flex-direction:row; align-items:flex-start; gap:48px; padding:32px 0 32px 0;">
+            <!-- 左栏：公司名及下划线 -->
+            <div style="flex:0 0 180px; display:flex; flex-direction:column; align-items:flex-start;">
+                <div
+                    style="font-family:'SimHei','黑体',Arial; font-size:32px; font-weight:700; color:#222; letter-spacing:2px; line-height:1.2; text-align:left;">
+                    <span id="yzfx-title-yz">宇智</span>飞翔
+                </div>
+                <div style="height:8px;"></div>
+                <div id="yzfx-underline"
+                    style="height:2px; width:auto; background:linear-gradient(90deg,#ff9800,#ff3d00,#ff9800); margin-left:0;">
+                </div>
+                <script>
+                    // 动态设置下划线宽度与“宇智”文字宽度一致
+                    window.addEventListener('DOMContentLoaded', function () {
+                        var yz = document.getElementById('yzfx-title-yz');
+                        var line = document.getElementById('yzfx-underline');
+                        if (yz && line) {
+                            line.style.width = yz.offsetWidth + 'px';
+                        }
+                    });
+                </script>
+            </div>
+            <!-- 右栏：公司描述 -->
+            <div
+                style="flex:1; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; font-size:1.08rem; color:#222; line-height:1.9; font-family:'Microsoft YaHei','微软雅黑',Arial;">
+                广东宇智飞翔通用航空科技有限公司（简称“宇智飞翔”）总部位于创新前沿城市珠海。公司专注于低空经济领域的开拓创新，并以人工智能技术为核心驱动力，赋能产业升级；专业从事无人机信息化系统平台研发、无人机低空智能防务系统研究、无人机低空巡检服务、无人机人员培训及考证照、青少年无人机科普研学等业务。<br>
+                <br>
+                宇智飞翔战略性布局“AI+低空经济”，广阔应用生态，致力于将智能无人机系统与行业需求深度融合。宇智飞翔的核心竞争力源自其卓越的团队。公司汇聚了来自人工智能领域的资深专家和技术精英，凭借对前沿AI技术的深刻理解和强大的研发能力，致力于解决低空应用中的复杂问题，持续推动智能无人机技术在垂直行业的落地与革新。
+            </div>
+        </div>
+        <div style="width:100%; display:flex; justify-content:center; align-items:center; margin-top:32px;">
+            <img src="images/about/yz-about2.jpg" alt="公司介绍图" style="max-width:100%; height:auto; display:block;">
+        </div>
+        <div id="sm">
+            <div style="width:100%; max-width:1200px; margin:0 auto; display:flex; flex-direction:row; align-items:flex-start; gap:48px; padding:32px 0 32px 0; position:relative; overflow:hidden;">
+                <!-- 银河系动态背景 -->
+                <canvas id="sm-galaxy-bg" style="position:absolute; left:0; top:0; width:100%; height:100%; z-index:0; pointer-events:none;"></canvas>
+                <!-- 左栏：企业文化 -->
+                <div style="flex:0 0 180px; display:flex; flex-direction:column; align-items:flex-start;">
+                    <div style="font-family:'SimHei','黑体',Arial; font-size:32px; font-weight:700; color:#222; letter-spacing:2px; line-height:1.2; text-align:left;">
+                        企业文化
+                    </div>
+                </div>
+                <!-- 右栏：文化描述 -->
+                <div style="flex:1; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; font-size:1.08rem; color:#222; line-height:1.9; font-family:'Microsoft YaHei','微软雅黑',Arial;">
+                    宇智飞翔以“用智能科技领航低空未来”为使命，立志成为低空经济智能化应用的先行者和领导者。<br>
+                    我们立足于珠海，放眼全国，致力于通过技术创新，构建安全、高效、智能的低空应用生态，为各行业的数字化转型和智能化升级提供强大的空中解决方案，共创低空经济的美好蓝图。
+                </div>
+            </div>
+            <script>
+            // 银河系点状动态背景（红蓝绿随机色，canvas自适应，点更小，点间连线）
+            (function() {
+                var canvas = document.getElementById('sm-galaxy-bg');
+                if (!canvas) return;
+                function resize() {
+                    var rect = canvas.parentElement.getBoundingClientRect();
+                    canvas.width = rect.width;
+                    canvas.height = rect.height;
+                }
+                resize();
+                window.addEventListener('resize', resize);
+                var ctx = canvas.getContext('2d');
+                var W = () => canvas.width;
+                var H = () => canvas.height;
+                var centerX = () => W()/2, centerY = () => H()/2;
+                var starCount = 120, arms = 4, spiralSpread = 2.2, armSpread = 0.25;
+                var colors = ['#ff1744','#2979ff','#00e676'];
+                var stars = [];
+                for(let i=0;i<starCount;i++){
+                    var arm = i%arms;
+                    var angle = (i/starCount)*Math.PI*2*arms + arm*Math.PI*2/arms;
+                    var radius = Math.random()*0.38 + 0.18;
+                    var theta = angle + (Math.random()-0.5)*armSpread;
+                    var t = Math.random()*Math.PI*2;
+                    stars.push({
+                        baseR: radius,
+                        baseTheta: theta,
+                        arm: arm,
+                        phase: t,
+                        speed: 0.2+Math.random()*0.3,
+                        size: 0.7+Math.random()*0.7,
+                        alpha: 0.18+Math.random()*0.22,
+                        color: colors[Math.floor(Math.random()*colors.length)]
+                    });
+                }
+                function draw() {
+                    ctx.clearRect(0,0,W(),H());
+                    var time = Date.now()/1200;
+                    var pts = [];
+                    for(let i=0;i<stars.length;i++){
+                        var s = stars[i];
+                        var r = s.baseR + 0.01*Math.sin(time*s.speed + s.phase);
+                        var theta = s.baseTheta + spiralSpread*r + 0.04*Math.cos(time*s.speed + s.phase);
+                        var x = centerX() + Math.cos(theta)*r*W()*0.9;
+                        var y = centerY() + Math.sin(theta)*r*H()*0.9;
+                        pts.push({x,y,s});
+                    }
+                    // 连线
+                    ctx.save();
+                    ctx.globalAlpha = 0.10;
+                    for(let i=0;i<pts.length;i++){
+                        for(let j=i+1;j<pts.length;j++){
+                            var dx = pts[i].x-pts[j].x, dy = pts[i].y-pts[j].y;
+                            var dist = Math.sqrt(dx*dx+dy*dy);
+                            if(dist<90){
+                                ctx.beginPath();
+                                ctx.moveTo(pts[i].x,pts[i].y);
+                                ctx.lineTo(pts[j].x,pts[j].y);
+                                ctx.strokeStyle = '#fff';
+                                ctx.lineWidth = 1;
+                                ctx.stroke();
+                            }
+                        }
+                    }
+                    ctx.restore();
+                    // 画点
+                    for(let i=0;i<pts.length;i++){
+                        var {x,y,s} = pts[i];
+                        ctx.save();
+                        ctx.globalAlpha = s.alpha;
+                        ctx.beginPath();
+                        ctx.arc(x, y, s.size, 0, Math.PI*2);
+                        ctx.fillStyle = s.color;
+                        ctx.shadowColor = s.color;
+                        ctx.shadowBlur = 6;
+                        ctx.fill();
+                        ctx.restore();
+                    }
+                    requestAnimationFrame(draw);
+                }
+                draw();
+            })();
+            </script>
+        </div>
+        <div id="zl">
+            <img src="images/about/yz-about3.jpg" alt="资质荣誉" style="width:100vw; max-width:100%; height:auto; display:block; margin:0 auto;">
+        </div>
+        <div id="zlwz">
+            <div style="width:100%; max-width:1200px; margin:56px auto 56px auto; display:flex; flex-direction:row; align-items:center; gap:48px;">
+                <!-- 左栏：满意服务 -->
+                <div style="flex:1; display:flex; flex-direction:column; align-items:flex-start;">
+                    <div style="font-family:'SimHei','黑体',Arial; font-size:28px; font-weight:700; color:#222; letter-spacing:2px; line-height:1.2; text-align:left;">
+                        <span id="zlwz-title-my">满意</span>服务
+                    </div>
+                    <div style="height:8px;"></div>
+                    <div id="zlwz-underline" style="height:3px; width:auto; background:#ff9800; margin-left:0;"></div>
+                    <script>
+                    window.addEventListener('DOMContentLoaded', function() {
+                        var my = document.getElementById('zlwz-title-my');
+                        var line = document.getElementById('zlwz-underline');
+                        if(my && line) {
+                            line.style.width = my.offsetWidth + 'px';
+                        }
+                    });
+                    </script>
+                    <ul style="margin:24px 0 0 18px; padding:0; font-size:1.08rem; color:#222; line-height:2; font-family:'Microsoft YaHei','微软雅黑',Arial;">
+                        <li>时刻铭记客户满意是宇智飞翔生存的基石，是客户选择宇智飞翔的理由；</li>
+                        <li>我们把客户要求与期望准确传递到宇智飞翔整个价值链，共同构建服务质量；</li>
+                        <li>我们尊重规则流程，一次把事情做对；</li>
+                        <li>我们发挥全部员工潜能，持续改进；</li>
+                        <li>我们与客户一起平衡机会与风险，快速响应客户需求，实现可持续发展；</li>
+                        <li>宇智飞翔承诺向客户提供高满意度的产品、服务和解决方案，持续不断让客户体验到我们致力于为每个客户创造价值。</li>
+                    </ul>
+                </div>
+                <!-- 右栏：图片 -->
+                <div style="flex:0 0 400px; display:flex; align-items:center;">
+                    <img src="images/about/yz-about4.jpg" alt="满意服务" style="width:400px; max-width:100%; height:auto; display:block; border-radius:0;">
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
     <!-- 第8栏：页脚 -->
     <div class="yz_footer">
@@ -196,4 +376,4 @@
 
 </body>
 
-</html>    
+</html>
