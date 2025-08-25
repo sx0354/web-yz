@@ -1,3 +1,56 @@
+.product-body {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 220px;
+    position: relative;
+}
+.product-btn-wrap {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+}
+.product-body .btn {
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: none;
+}
+/* 产品中心图片和文字区域等高等宽样式 */
+.product-list-row {
+    align-items: stretch;
+}
+.product-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.product-img-wrap {
+    width: 100%;
+    aspect-ratio: 1.2/1; /* 保证图片区域宽高比一致 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+.product-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+.product-body {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 220px;
+}
 /* 页眉LOGO行样式 */
 .header-logo-row {
     display: flex;
