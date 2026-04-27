@@ -29,3 +29,11 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', setProductBodyHeights);
 });
 
+const images = document.querySelectorAll('img');
+images.forEach(img => {
+  img.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert('图片禁止直接保存，如需使用请联系管理员');
+  });
+});
+
